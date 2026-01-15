@@ -153,6 +153,13 @@ main {
     font-size: 13.5px;
 }
 
+.introduction {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    margin: 10px 0;
+}
+
 .meta {
     text-align: right;
     font-size: 12.5px;
@@ -432,6 +439,7 @@ ul.bullets li {
 }
 
 .career-when .dates {
+    font-size: 0.8rem;
     font-weight: 800;
     color: #111;
 }
@@ -457,3 +465,4 @@ ul.bullets li {
     font-size: 12.6px;
     color: var(--muted);
 }
+
