@@ -466,3 +466,49 @@ ul.bullets li {
     color: var(--muted);
 }
 
+@media (max-width: 700px) {
+  .career-row {
+    grid-template-columns: 1fr; 
+    gap: 8px;
+    padding: 12px 0;
+  }
+
+  .career-when {
+    display: flex;               
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    align-items: baseline;
+    font-size: 12.5px;
+  }
+
+  .career-when .dates {
+    font-size: 13px;             
+    font-weight: 800;
+  }
+
+  .career-when .place {
+    margin-top: 0;               
+    color: var(--muted);
+  }
+
+  .career-what h3 {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .career-detail h4 {
+    margin: 10px 0 6px;
+    font-weight: 800;            
+  }
+
+  ul.bullets {
+    margin-top: 6px;
+    padding-left: 18px;
+  }
+
+  ul.bullets li {
+    font-size: 13.5px;           
+    line-height: 1.5;
+    margin: 6px 0;
+  }
+}
