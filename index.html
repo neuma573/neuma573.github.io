@@ -25,179 +25,102 @@
             <div class="personal-info">
                 <h1 class="name">나호진</h1>
                 <p class="headline">
-                    운영 중인 시스템의 구조적 문제를 진단하고, 검증 가능한 방식으로 개선하는 Java/Spring 백엔드 엔지니어
-                </p>
-                <p class="headline">
                     <a href="mailto:neuma573@gmail.com">neuma573@gmail.com</a>
                 </p>
                 <p class="introduction">
-                    2022년부터 Java/Spring 백엔드 엔지니어로 커리어를 쌓아왔습니다. 레거시 시스템의 구조를 분석하고, 성능 병목과 장애 요인을 단계적으로 해소하는 데 강점이 있습니다. 기술 도입 자체보다 현재 구조가 형성된 맥락을 파악하고, 운영 환경에서 검증 가능한 방식으로 개선하는 것을 중요하게 생각합니다.
+                    2022년부터 Java/Spring 백엔드 엔지니어로 커리어를 쌓아왔습니다. 레거시 시스템의 구조를 분석하고, 성능 병목과 장애 요인을 단계적으로 해소하는 것에 관심을 갖고 개선해온 경험이 있습니다. 기술 도입 자체보다 현재 구조가 형성된 맥락을 파악하고, 운영 환경에서 검증 가능한 방식으로 개선하는 것을 중요하게 생각합니다.
                 </p>
             </div>
         </header>
-        <!-- CAREER -->
-        <section id="career" aria-label="커리어">
+
+        <!-- ══ 경력 ══ -->
+        <section id="career" aria-label="경력">
             <div class="sec-title">
-                <h2>경력</h2>
+                <h2>경력<span style="font-weight:400; font-size:12.5px; color:var(--muted); margin-left:10px;">3년 8개월</span></h2>
             </div>
 
             <div class="career">
+                <!-- ── 딥파인 ── -->
                 <div class="career-row">
                     <div class="career-when">
-                        <div class="dates">2024.01 ~ 재직중</div>
-                        <div class="place">경기도 수원시</div>
+                        <div class="dates">2024.02 ~ 재직중</div>
+                        <div class="place">정규직 · 주임연구원</div>
                     </div>
                     <div class="career-what">
                         <h3>주식회사 딥파인</h3>
-                        <div class="career-detail">
-                            <h4>회사소개</h4>
+                        <div class="sub">XR 글래스 서비스 개발 회사 · 경기도청 파견</div>
+
+                        <div class="career-project">
+                            <h4 class="career-project-title">디지털 경기도정 운영 [경기민원24, 경기도정지식포털]</h4>
+                            <div class="career-project-meta">2024.02 – 현재 · 풀스택개발</div>
+                            <div class="career-project-stack">Spring Framework 4.3, MyBatis, MariaDB, jQuery, Vue.js</div>
                             <ul class="bullets">
-                                <li>XR 글래스 서비스 개발 회사</li>
-                            </ul>
-                        </div>
-                        <div class="career-detail">
-                            <h4>주요 성과</h4>
-                            <ul class="bullets">
-                                <li>다중 쿼리 실행 로직을 단일 JOIN 쿼리로 통합하여 통계 조회 응답 시간 대폭 개선/li>
-                                <li>로깅 구조 재설계를 통해 운영 환경의 디버깅 효율성 향상</li>
-                                <li>최대 1,000 RPS 이상의 트래픽을 안정적으로 처리할 수 있도록 시스템 튜닝</li>
-                            </ul>
-                        </div>
-                        <div class="career-detail">
-                            <h4>주요 업무</h4>
-                            <ul class="bullets">
-                                <li>경기도청 파견 근무로 공공 서비스 백엔드 개발 및 운영</li>
-                                <li>Spring Framework 4.x 기반 레거시 코드의 구조적 문제를 분석하고, 프레임워크 제약 내에서 최선의 방식으로 리팩토링</li>
-                                <li>경기도정지식포털 커뮤니티 기능 개선 (기술 표준 준수, 사용자 요구사항 반영)</li>
-                            </ul>
-                        </div>
-                        <div class="career-detail">
-                            <h4>주요 프로젝트</h4>
-                            <ul class="bullets">
-                                <li>경기민원24</li>
-                                <li>경기도정지식포털</li>
-                            </ul>
-                        </div>
-                        <div class="career-detail">
-                            <h4>주요 사용 기술</h4>
-                            <ul class="bullets">
-                                <li>Backend: egovframework 3.9 (SpringFramework 4.3.22), MyBatis</li>
-                                <li>Datasource: MariaDB</li>
-                                <li>Frontend: jQuery, Vue.js (Component)</li>
-                            </ul>
-                        </div>
-                        <div class="career-detail">
-                            <h4>부서/직급</h4>
-                            <ul class="bullets">
-                                <li>플랫폼개발팀/주임 연구원</li>
+                                <li>사용자 현황 통계 조회에서 M×N회 반복 쿼리 호출 구조를 단일 JOIN 쿼리로 통합, 응답 시간 약 60,000ms → 500ms 이하로 개선</li>
+                                <li>OncePerRequestFilter 기반 requestId를 도입하여 요청 단위 로그 추적 체계 구축. 불필요한 파라미터 로깅 제거 및 쿼리 로그 포맷 정비로 장애 원인 추적 시 관련 로그 즉시 식별 가능하도록 개선</li>
+                                <li>전체 레이어의 HashMap 파라미터 전달 구조 및 범용 VO를 용도별 VO/DTO 클래스로 전환, 타입 안전성 확보 및 IDE 자동완성을 통한 개발 생산성 향상</li>
+                                <li>로깅, 실행 시간 측정, 이력 테이블 등록 등 전 서비스에 걸쳐 반복되던 횡단 관심사를 커스텀 어노테이션 기반 AOP로 분리, 비즈니스 로직에서 부가 코드 제거</li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
+                <!-- ── 플랫타이엑스 ── -->
                 <div class="career-row">
                     <div class="career-when">
                         <div class="dates">2023.05 ~ 2023.08</div>
-                        <div class="place">서울시 서초구</div>
+                        <div class="place">정규직 · 사원</div>
                     </div>
                     <div class="career-what">
                         <h3>주식회사 플랫타이엑스</h3>
-                        <div class="career-detail">
-                            <h4>회사소개</h4>
+                        <div class="sub">암호화폐 거래소</div>
+
+                        <div class="career-project">
+                            <h4 class="career-project-title">거래소 OpenAPI SpringBoot 전환 프로젝트 <span class="career-project-note">(서비스 종료로 미출시)</span></h4>
+                            <div class="career-project-meta">2023.05 – 2023.08 · 백엔드개발</div>
+                            <div class="career-project-stack">Spring Boot 2.7, Java 11, JPA, Redis (Lettuce)</div>
                             <ul class="bullets">
-                                <li>암호화폐 거래소</li>
+                                <li>WIP 상태로 중단된 Spring Framework 4.3 프로젝트를 인수받아 Spring Boot 2.7 기반으로 재구축</li>
+                                <li>전체 API의 HashMap 기반 파라미터 전달 구조를 Request/Response DTO로 전환하여, 타입 캐스팅 오류를 컴파일 타임에 검출 가능하도록 개선</li>
+                                <li>팀 표준에 맞춰 Redis 클라이언트를 Jedis에서 Lettuce로 전환, Spring Session 연동 구성</li>
+                                <li>수동 try-catch-commit-rollback 트랜잭션 처리를 @Transactional 선언형으로 전환하여 트랜잭션 경계 관리 코드 제거</li>
+                                <li>MyBatis XML 매퍼 전량을 Spring Data JPA로 전환, 반복적인 단순 CRUD 쿼리 제거 및 Entity 기반 도메인 모델 설계로 팀 내 데이터 접근 컨벤션 통일</li>
                             </ul>
                         </div>
-                        <div class="career-detail">
-                            <h4>주요 성과</h4>
+
+                        <div class="career-project">
+                            <h4 class="career-project-title">온보딩 프로젝트 (App-Push 서비스 개발)</h4>
+                            <div class="career-project-meta">2023.05 – 2023.08 · 백엔드개발</div>
+                            <div class="career-project-stack">Spring Boot 2.7, Java 11, Firebase FCM, RabbitMQ, MySQL</div>
                             <ul class="bullets">
-                                <li>Spring Framework 4.3 → Spring Boot 2.7 전환 완료 (backend-openapi 프로젝트)</li>
-                                <li>Firebase FCM 기반 In-App Push 알림 시스템 신규 구축</li>
-                            </ul>
-                        </div>
-                        <div class="career-detail">
-                            <h4>주요 업무</h4>
-                            <ul class="bullets">
-                                <li>Spring Framework 4.3 기반 서비스를 Spring Boot 2.7로 마이그레이션하며 레거시 코드를 팀 컨벤션에 맞게 리팩토링</li>
-                                <li>레거시 코드를 팀 컨벤션 및 Spring 표준에 따라 리팩토링</li>
-                                <li>문자 메세지 발송 대신 Firebase FCM 기반 In-App Push 알림 서비스 신규 구축</li>
-                                <li>RabbitMQ 토픽 기반 메시지 리스너(consumer) 구현 및 Push 발송 처리</li>
-                            </ul>
-                        </div>
-                        <div class="career-detail">
-                            <h4>주요 프로젝트</h4>
-                            <ul class="bullets">
-                                <li>backend-openapi</li>
-                                <li>backend-push</li>
-                            </ul>
-                        </div>
-                        <div class="career-detail">
-                            <h4>주요 사용 기술</h4>
-                            <ul class="bullets">
-                                <li>Backend: SpringBoot 2.7.x, Spring Data JPA, Firebase Cloud Messaging, RabbitMQ</li>
-                                <li>Datasource: MySQL</li>
-                                <li>Cloud: AWS ec2</li>
-                                <li>VCS: GitHub</li>
-                            </ul>
-                        </div>
-                        <div class="career-detail">
-                            <h4>부서/직급</h4>
-                            <ul class="bullets">
-                                <li>백엔드개발팀/사원</li>
+                                <li>Firebase FCM 기반 전역 알림 발송 파이프라인 설계 및 구현</li>
+                                <li>RabbitMQ Consumer를 통한 비동기 Push 발송 처리, DLQ 구성으로 실패 메시지 격리</li>
+                                <li>Spring Scheduling 활용 정기 프로모션 메시지 자동 발송 구현</li>
+                                <li>TDD 실험적 도입, 전 서비스 레이어 단위 테스트 작성</li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
+                <!-- ── 미디어로그 ── -->
                 <div class="career-row">
                     <div class="career-when">
                         <div class="dates">2022.02 ~ 2023.05</div>
-                        <div class="place">서울시 마포구</div>
+                        <div class="place">정규직 · 사원</div>
                     </div>
                     <div class="career-what">
-                        <h3>주식회사 미디어로그</h3>
-                        <div class="career-detail">
-                            <h4>회사소개</h4>
+                        <h3>(주) 미디어로그</h3>
+                        <div class="sub">MVNO 사업자 및 B2B 서비스 개발사 (LGU+ 자회사)</div>
+
+                        <div class="career-project">
+                            <h4 class="career-project-title">미디어로그 그룹웨어 개발 (사내 약 500명 이상 사용)</h4>
+                            <div class="career-project-meta">2022.02 – 2023.05 · 풀스택 개발</div>
+                            <div class="career-project-stack">Spring Boot, Java 1.8, MyBatis, MySQL, Vue.js, Electron</div>
                             <ul class="bullets">
-                                <li>MVNO 사업자 및 B2B 서비스 개발사(LGU+ 자회사)</li>
-                            </ul>
-                        </div>
-                        <div class="career-detail">
-                            <h4>주요 성과</h4>
-                            <ul class="bullets">
-                                <li>미디어로그 그룹웨어 개선 공로를 인정받아 포상금 100만원 획득</li>
-                                <li>2022년 KPI 등급 B+로 성과급 200% 수여</li>
-                                <li>인턴 입사 후 정직원 전환</li>
-                            </ul>
-                        </div>
-                        <div class="career-detail">
-                            <h4>주요 업무</h4>
-                            <ul class="bullets">
-                                <li>MAU 1,000명 가량의 서비스 운영</li>
-                                <li>로깅 레벨 최적화를 통한 서버 저장소 사용량 80% 절감 및 시스템 가용성 향상</li>
-                                <li>NICE 인증 모듈을 활용한 협력사 회원가입 서비스 신규 구축, 기구축된 전자결재 시스템 연동 및 등록 처리 자동화</li>
-                            </ul>
-                        </div>
-                        <div class="career-detail">
-                            <h4>주요 프로젝트</h4>
-                            <ul class="bullets">
-                                <li>미디어로그 미인 그룹웨어 개발</li>
-                                <li>미디어로그 PMS 개발</li>
-                                <li>LGU+ 0505 FAX 개선</li>
-                                <li>미디어로그 미인 그룹웨어 메신저 개발</li>
-                            </ul>
-                        </div>
-                        <div class="career-detail">
-                            <h4>주요 사용 기술</h4>
-                            <ul class="bullets">
-                                <li>Backend: SpringBoot 2.5.x, Pan Farmework(MVC Framework based on Java 1.6) MyBatis</li>
-                                <li>Frontend: jQuery, Vue.js, Qusar.js, Electron</li>
-                                <li>Mobile: Swift3, Android(Java)</li>
-                                <li>Datasource: MySQL</li>
-                            </ul>
-                        </div>
-                        <div class="career-detail">
-                            <h4>부서/직급</h4>
-                            <ul class="bullets">
-                                <li>기업IT담당 기업IT개발1팀/사원</li>
+                                <li>운영 환경에 불필요하게 출력되던 상세 로그(메일 본문 전체 등) 제거, 일일 로그 용량 수 GB → 수백 MB로 약 80% 절감</li>
+                                <li>NICE 휴대폰 본인인증 연동 기반 협력사 회원가입 서비스 신규 구축, 기존 종이/파일 양식 기반 수기 등록 프로세스를 온라인 자가 등록으로 전환</li>
+                                <li>협력사 인력 투입·철수·연장 신청 시 사내 전자결재 자동 기안 연동 구현, 기존 PM→총무 수동 전달 프로세스 제거</li>
+                                <li>총무팀 엑셀 기반 수동 관리 업무를 시스템화, 물리 출입증 발급 외 협력사 관련 수동 업무 대부분 제거</li>
+                                <li>그룹웨어 개선 공로를 인정받아 포상금 100만원 획득, 2022년 KPI 등급 B+로 성과급 200% 수여</li>
                             </ul>
                         </div>
                     </div>
@@ -205,7 +128,7 @@
             </div>
         </section>
 
-        <!-- PROJECTS -->
+        <!-- ══ 기타 프로젝트 ══ -->
         <section id="projects" aria-label="기타 프로젝트">
             <div class="sec-title">
                 <h2>기타 프로젝트</h2>
@@ -213,36 +136,34 @@
             <div class="career">
                 <div class="career-row">
                     <div class="career-when">
-                        <div class="dates">2025-04</div>
+                        <div class="dates">2025.04</div>
                         <div class="place"><a href="https://github.com/chanwoo-park-service/unified-biztool">Repo</a></div>
                     </div>
                     <div class="career-what">
                         <h3>unified-biztool</h3>
-                        <div class="sub">엑셀 파일 기반의 입력만으로 Meta Bussiness Suite의 다양한 광고 자산 등록을 통합하는 프로젝트</div>
+                        <div class="sub">엑셀 파일 기반 입력만으로 Meta Business Suite의 다양한 광고 자산 등록을 통합하는 프로젝트</div>
                         <ul class="bullets">
                             <li>프로젝트 리딩</li>
-                            <li>대량으로 광고/캠페인/세트/크리에이티브 등록을 지원</li>
-                            <li>Bean Validation과 i18n을 통해 입력 검증 및 예외 처리 시 메세지 국제화</li>
-                            <li>Api 병렬처리로 기존 Meta Gui 대비 90% 빠른 광고 등록 가능</li>
-                            <li>미숙련 비개발 인력이 Meta Buissiness Suite에 대해 deep dive 하지 않아도 빠른 광고 처리 및 등록을 할 수 있도록 자동화</li>
-                            <li>내부망 on-premise로 서빙하는걸 희망하는 사업체에 적합한 제품</li>
+                            <li>대량 광고/캠페인/세트/크리에이티브 등록 지원</li>
+                            <li>Bean Validation과 i18n을 통해 입력 검증 및 예외 처리 시 메시지 국제화</li>
+                            <li>API 병렬처리로 기존 Meta GUI 대비 90% 빠른 광고 등록</li>
+                            <li>미숙련 비개발 인력이 Meta Business Suite에 대해 deep dive 하지 않아도 빠른 광고 등록이 가능하도록 자동화</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="career-row">
                     <div class="career-when">
-                        <div class="dates">2023-12</div>
+                        <div class="dates">2023.12</div>
                         <div class="place"><a href="https://github.com/neuma573/auto-board">Repo</a></div>
                     </div>
-
                     <div class="career-what">
                         <h3>auto-board</h3>
-                        <div class="sub">모던 SpringBoot3로 개발한 게시판</div>
+                        <div class="sub">모던 Spring Boot 3 기반 게시판</div>
                         <ul class="bullets">
                             <li>프로젝트 리딩</li>
-                            <li>권한 관리는 Spring Security 6 초기 생태계의 학습 자료 부족이라는 제약 하에서, 단순 동작 구현을 넘어 내부 동작 이해와 확장성을 검증하기 위해 AOP 기반 어노테이션 방식으로 직접 설계·구현함</li>
-                            <li>OpenAi Client 및 Spring Scheduler을 활용한 자동 게시글 생성 및 답글 작성 로직 구현</li>
+                            <li>Spring Security 6 초기 생태계의 학습 자료 부족 제약 하에서, 내부 동작 이해와 확장성 검증을 위해 AOP 기반 어노테이션 방식으로 권한 관리 직접 설계·구현</li>
+                            <li>OpenAI Client 및 Spring Scheduler를 활용한 자동 게시글 생성 및 답글 작성 로직 구현</li>
                             <li>개발 컨벤션 준수로 일관되고 유지보수성 높은 코드 지향</li>
                         </ul>
                     </div>
@@ -250,26 +171,42 @@
             </div>
         </section>
 
-        <!-- EDUCATION / ETC -->
+        <!-- ══ 학력 ══ -->
         <section id="education" aria-label="학력">
             <div class="sec-title">
                 <h2>학력</h2>
-                <p class="hint"></p>
             </div>
-
             <div class="career">
                 <div class="career-row">
                     <div class="career-when">
                         <div class="dates">2013 ~ 2021</div>
                         <div class="place">졸업</div>
                     </div>
-
                     <div class="career-what">
                         <h3>중앙대학교 · 문헌정보학과</h3>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- ══ 수상 ══ -->
+        <section id="awards" aria-label="수상">
+            <div class="sec-title">
+                <h2>수상</h2>
+            </div>
+            <div class="career">
+                <div class="career-row">
+                    <div class="career-when">
+                        <div class="dates">2021.05</div>
+                        <div class="place">한국콘텐츠진흥원</div>
+                    </div>
+                    <div class="career-what">
+                        <h3>예비창업자패키지 입상</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <div class="footnote">
             <span id="printAt"></span>
