@@ -3,16 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>나호진 (neuma573)</title>
-    <meta name="description" content="운영 중인 Java/Spring 시스템의 구조를 분석하고 단계적으로 개선하는 백엔드 엔지니어" />
+    <title>나호진 | Java Spring Engineer</title>
+    <meta name="description" content="운영 중인 Java/Spring 시스템의 구조를 분석하고 단계적으로 개선하는 엔지니어" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="나호진 | Java Spring Backend Engineer" />
-    <meta property="og:description" content="Java Spring 백엔드 엔지니어 나호진 이력서." />
+    <meta property="og:title" content="나호진 | Java Spring Engineer" />
+    <meta property="og:description" content="Java Spring 엔지니어 나호진 이력서." />
     <meta property="og:site_name" content="나호진 이력서" />
+    <meta property="og:url" content="https://neuma573.com" />
 
     <meta name="twitter:card" content="summary_large_image" />
 
+    <link rel="canonical" href="https://neuma573.com" />
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -28,7 +30,7 @@
                     <a href="mailto:neuma573@gmail.com">neuma573@gmail.com</a>
                 </p>
                 <p class="introduction">
-                    2022년부터 Java/Spring 백엔드 엔지니어로 커리어를 쌓아왔습니다. 레거시 시스템의 구조를 분석하고, 성능 병목과 장애 요인을 단계적으로 해소하는 것에 관심을 갖고 개선해온 경험이 있습니다. 기술 도입 자체보다 현재 구조가 형성된 맥락을 파악하고, 운영 환경에서 검증 가능한 방식으로 개선하는 것을 중요하게 생각합니다.
+                    AI가 코드 작성의 상당 부분을 가져가는 시대에, 4년차 개발자의 가치는 AI가 만든 코드를 운영 환경에 안전하게 통합하고, 시스템의 맥락을 읽어 판단하는 데 있다고 생각합니다. Java/Spring 기반으로 레거시 시스템의 구조 분석과 성능 병목 해소를 해왔으며, 사이드 프로젝트에서는 Claude Code 등 AI 도구를 적극 활용해 풀스택 범위를 직접 다루고 있습니다.
                 </p>
             </div>
         </header>
@@ -55,10 +57,10 @@
                             <div class="career-project-meta">2024.02 – 현재 · 풀스택개발</div>
                             <div class="career-project-stack">Spring Framework 4.3, MyBatis, MariaDB, jQuery, Vue.js</div>
                             <ul class="bullets">
-                                <li>사용자 현황 통계 조회에서 M×N회 반복 쿼리 호출 구조를 단일 JOIN 쿼리로 통합, 응답 시간 약 60,000ms → 500ms 이하로 개선</li>
-                                <li>OncePerRequestFilter 기반 requestId를 도입하여 요청 단위 로그 추적 체계 구축. 불필요한 파라미터 로깅 제거 및 쿼리 로그 포맷 정비로 장애 원인 추적 시 관련 로그 즉시 식별 가능하도록 개선</li>
-                                <li>전체 레이어의 HashMap 파라미터 전달 구조 및 범용 VO를 용도별 VO/DTO 클래스로 전환, 타입 안전성 확보 및 IDE 자동완성을 통한 개발 생산성 향상</li>
-                                <li>로깅, 실행 시간 측정, 이력 테이블 등록 등 전 서비스에 걸쳐 반복되던 횡단 관심사를 커스텀 어노테이션 기반 AOP로 분리, 비즈니스 로직에서 부가 코드 제거</li>
+                                <li>응답 1초 초과 슬로우 쿼리 전수 점검 프로세스 도입 - 실행 계획 분석 및 인덱스 전략 재설계를 통해 병목 쿼리를 체계적으로 식별·개선, 운영 중인 쿼리 수정을 최소화하는 방향으로 천만 건 규모 테이블의 문자열 컬럼 JOIN에 복합 인덱스를 설계·적용하여 접속 통계 쿼리 111,500ms → 1,000ms (111배) 개선, 사용자 통계 쿼리 8,000ms → 800ms (10배) 개선</li>
+                                <li>OncePerRequestFilter 기반 로그 트레이싱 도입 - 요청 시작부터 종료까지 단일 ID로 추적 가능하도록 로그 체계 재설계, 장애 원인 분석 시 요청별 로그 즉시 식별 가능하도록 개선</li>
+                                <li>전역 예외 처리 기반 알림 체계 구축 - 사용자 예외 발생 시 관리자 페이지 및 메신저로 히스토리가 자동 적재되도록 자동화하여 운영 대응 속도 개선</li>
+                                <li>레거시 개발 환경 현대화 작업 주도 - 폐쇄망에 Gitea 기반 로컬 Git 서버를 도입해 형상관리 부재 문제 해소, JUnit4 기반 단위 테스트를 도입해 회귀 검증 가능한 개발 프로세스 구축</li>
                             </ul>
                         </div>
                     </div>
@@ -116,9 +118,9 @@
                             <div class="career-project-meta">2022.02 – 2023.05 · 풀스택 개발</div>
                             <div class="career-project-stack">Spring Boot, Java 1.8, MyBatis, MySQL, Vue.js, Electron</div>
                             <ul class="bullets">
-                                <li>운영 환경에 불필요하게 출력되던 상세 로그(메일 본문 전체 등) 제거, 일일 로그 용량 수 GB → 수백 MB로 약 80% 절감</li>
+                                <li>운영 환경에 불필요하게 출력되던 상세 로그(메일 본문 전체 등) 제거, 일일 로그 용량 약 80% 절감</li>
                                 <li>NICE 휴대폰 본인인증 연동 기반 협력사 회원가입 서비스 신규 구축, 기존 종이/파일 양식 기반 수기 등록 프로세스를 온라인 자가 등록으로 전환</li>
-                                <li>협력사 인력 투입·철수·연장 신청 시 사내 전자결재 자동 기안 연동 구현, 기존 PM→총무 수동 전달 프로세스 제거</li>
+                                <li>협력사 인력 투입·철수·연장 신청 시 사내 전자결재 자동 기안 연동 구현, 기존 PM → 총무 수동 전달 프로세스 제거</li>
                                 <li>총무팀 엑셀 기반 수동 관리 업무를 시스템화, 물리 출입증 발급 외 협력사 관련 수동 업무 대부분 제거</li>
                                 <li>그룹웨어 개선 공로를 인정받아 포상금 100만원 획득, 2022년 KPI 등급 B+로 성과급 200% 수여</li>
                             </ul>
@@ -202,6 +204,10 @@
                     </div>
                     <div class="career-what">
                         <h3>예비창업자패키지 입상</h3>
+                        <div class="sub">MVP 개발</div>
+                        <ul class="bullets">
+                            <li>사업팀의 아이디어를 빠르게 MVP로 구현하여 시장 검증을 지원 — 짧은 주기로 기능 개발·배포를 반복하며 서비스 방향성 결정에 및 정부 지원 사업 선정에 기여</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -213,5 +219,20 @@
         </div>
     </article>
 </main>
+<script>
+    (function () {
+        const start = new Date(2022, 1); // Feb 2022
+        const now = new Date();
+        let months = (now.getFullYear() - start.getFullYear()) * 12
+            + (now.getMonth() - start.getMonth());
+        const years = Math.floor(months / 12);
+        months = months % 12;
+        const text = years > 0
+            ? (months > 0 ? `${years}년 ${months}개월` : `${years}년`)
+            : `${months}개월`;
+        const el = document.querySelector('.sec-title h2 span');
+        if (el) el.textContent = text;
+    })();
+</script>
 </body>
 </html>
