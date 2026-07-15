@@ -255,50 +255,78 @@
     (function () {
         const now = new Date();
 
+        // month는 사람이 쓰는 1~12 기준
         const careers = [
-            // 커리어 1: 미디어로그
             {
-                start: new Date(2022, 1, 1), // 2022.02
-                end: new Date(2023, 5, 1)    // 2023.05까지 포함
+                start: { year: 2022, month: 2 },
+                end: { year: 2023, month: 5 }
             },
-            // 커리어 2: 플랫타이엑스
             {
-                start: new Date(2023, 4, 1), // 2023.05
-                end: new Date(2023, 8, 1)    // 2023.08까지 포함
+                start: { year: 2023, month: 5 },
+                end: { year: 2023, month: 8 }
             },
-            // 커리어 3: 딥파인, 재직 중
             {
-                start: new Date(2024, 1, 1), // 2024.02
-                end: new Date(
-                    now.getFullYear(),
-                    now.getMonth() + 1,
-                    1
-                )
+                start: { year: 2024, month: 2 },
+                end: {
+                    year: now.getFullYear(),
+                    month: now.getMonth() + 1
+                }
             }
         ];
 
-        const totalMonths = careers.reduce((sum, career) => {
-            const months =
-                (career.end.getFullYear() - career.start.getFullYear()) * 12
-                + (career.end.getMonth() - career.start.getMonth());
+        const toMonthIndex = ({ year, month }) =>
+            year * 12 + (month - 1);
 
-            return sum + months;
-        }, 0);
+        const ranges = careers
+            .map(({ start, end }) => ({
+                start: toMonthIndex(start),
+                // 종료 월 포함
+                endExclusive: toMonthIndex(end) + 1
+            }))
+            .sort((a, b) => a.start - b.start);
+
+        const mergedRanges = [];
+
+        for (const range of ranges) {
+            const last = mergedRanges[mergedRanges.length - 1];
+
+            if (!last || range.start > last.endExclusive) {
+                mergedRanges.push({ ...range });
+            } else {
+                last.endExclusive = Math.max(
+                    last.endExclusive,
+                    range.endExclusive
+                );
+            }
+        }
+
+        const totalMonths = mergedRanges.reduce(
+            (sum, range) =>
+                sum + (range.endExclusive - range.start),
+            0
+        );
 
         const years = Math.floor(totalMonths / 12);
         const months = totalMonths % 12;
 
-        const text = years > 0
-            ? months > 0
-                ? `${years}년 ${months}개월`
-                : `${years}년`
-            : `${months}개월`;
+        const text = [
+            years > 0 ? `${years}년` : '',
+            months > 0 ? `${months}개월` : ''
+        ].filter(Boolean).join(' ') || '0개월';
 
         const el = document.querySelector('.sec-title h2 span');
 
         if (el) {
             el.textContent = text;
         }
+
+        console.log({
+            currentDate: now,
+            ranges,
+            mergedRanges,
+            totalMonths,
+            text
+        });
     })();
 </script>
 </body>
