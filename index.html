@@ -253,17 +253,52 @@
 </main>
 <script>
     (function () {
-        const start = new Date(2022, 1); // Feb 2022
         const now = new Date();
-        let months = (now.getFullYear() - start.getFullYear()) * 12
-            + (now.getMonth() - start.getMonth());
-        const years = Math.floor(months / 12);
-        months = months % 12;
+
+        const careers = [
+            // 커리어 1: 미디어로그
+            {
+                start: new Date(2022, 1, 1), // 2022.02
+                end: new Date(2023, 5, 1)    // 2023.05까지 포함
+            },
+            // 커리어 2: 플랫타이엑스
+            {
+                start: new Date(2023, 4, 1), // 2023.05
+                end: new Date(2023, 8, 1)    // 2023.08까지 포함
+            },
+            // 커리어 3: 딥파인, 재직 중
+            {
+                start: new Date(2024, 1, 1), // 2024.02
+                end: new Date(
+                    now.getFullYear(),
+                    now.getMonth() + 1,
+                    1
+                )
+            }
+        ];
+
+        const totalMonths = careers.reduce((sum, career) => {
+            const months =
+                (career.end.getFullYear() - career.start.getFullYear()) * 12
+                + (career.end.getMonth() - career.start.getMonth());
+
+            return sum + months;
+        }, 0);
+
+        const years = Math.floor(totalMonths / 12);
+        const months = totalMonths % 12;
+
         const text = years > 0
-            ? (months > 0 ? `${years}년 ${months}개월` : `${years}년`)
+            ? months > 0
+                ? `${years}년 ${months}개월`
+                : `${years}년`
             : `${months}개월`;
+
         const el = document.querySelector('.sec-title h2 span');
-        if (el) el.textContent = text;
+
+        if (el) {
+            el.textContent = text;
+        }
     })();
 </script>
 </body>
