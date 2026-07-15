@@ -253,17 +253,80 @@
 </main>
 <script>
     (function () {
-        const start = new Date(2022, 1); // Feb 2022
         const now = new Date();
-        let months = (now.getFullYear() - start.getFullYear()) * 12
-            + (now.getMonth() - start.getMonth());
-        const years = Math.floor(months / 12);
-        months = months % 12;
-        const text = years > 0
-            ? (months > 0 ? `${years}년 ${months}개월` : `${years}년`)
-            : `${months}개월`;
+
+        // month는 사람이 쓰는 1~12 기준
+        const careers = [
+            {
+                start: { year: 2022, month: 2 },
+                end: { year: 2023, month: 5 }
+            },
+            {
+                start: { year: 2023, month: 5 },
+                end: { year: 2023, month: 8 }
+            },
+            {
+                start: { year: 2024, month: 2 },
+                end: {
+                    year: now.getFullYear(),
+                    month: now.getMonth() + 1
+                }
+            }
+        ];
+
+        const toMonthIndex = ({ year, month }) =>
+            year * 12 + (month - 1);
+
+        const ranges = careers
+            .map(({ start, end }) => ({
+                start: toMonthIndex(start),
+                // 종료 월 포함
+                endExclusive: toMonthIndex(end) + 1
+            }))
+            .sort((a, b) => a.start - b.start);
+
+        const mergedRanges = [];
+
+        for (const range of ranges) {
+            const last = mergedRanges[mergedRanges.length - 1];
+
+            if (!last || range.start > last.endExclusive) {
+                mergedRanges.push({ ...range });
+            } else {
+                last.endExclusive = Math.max(
+                    last.endExclusive,
+                    range.endExclusive
+                );
+            }
+        }
+
+        const totalMonths = mergedRanges.reduce(
+            (sum, range) =>
+                sum + (range.endExclusive - range.start),
+            0
+        );
+
+        const years = Math.floor(totalMonths / 12);
+        const months = totalMonths % 12;
+
+        const text = [
+            years > 0 ? `${years}년` : '',
+            months > 0 ? `${months}개월` : ''
+        ].filter(Boolean).join(' ') || '0개월';
+
         const el = document.querySelector('.sec-title h2 span');
-        if (el) el.textContent = text;
+
+        if (el) {
+            el.textContent = text;
+        }
+
+        console.log({
+            currentDate: now,
+            ranges,
+            mergedRanges,
+            totalMonths,
+            text
+        });
     })();
 </script>
 </body>
