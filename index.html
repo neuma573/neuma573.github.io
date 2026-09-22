@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>나호진 | Java Spring Engineer</title>
-    <meta name="description" content="운영 중인 Java/Spring 시스템의 구조를 분석하고 단계적으로 개선하는 엔지니어" />
+    <title>나호진 | Java / Spring 개발자</title>
+    <meta name="description" content="Java/Spring 개발자 나호진. 공공 서비스의 SQL 성능 개선, 요청 로그 추적, 보안 취약점 조치 경험." />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="나호진 | Java Spring Engineer" />
+    <meta property="og:title" content="나호진 | Java / Spring 개발자" />
     <meta property="og:description" content="Java Spring 엔지니어 나호진 이력서." />
     <meta property="og:site_name" content="나호진 이력서" />
     <meta property="og:url" content="https://neuma573.com" />
 
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
 
     <link rel="canonical" href="https://neuma573.com" />
     <link rel="stylesheet" href="css/style.css" />
@@ -33,301 +33,126 @@
 </head>
 
 <body>
-
 <main>
-    <article class="sheet" aria-label="Resume">
-        <!-- HEADER -->
+    <article class="sheet" aria-label="나호진 이력서">
         <header class="header">
-            <div class="personal-info">
-                <h1 class="name">나호진</h1>
-                <p class="headline">
-                    <a href="mailto:neuma573@gmail.com">neuma573@gmail.com</a>
-                </p>
-                <p class="introduction">
-                    운영 중인 시스템을 개선하는 일을 주로 해왔습니다. 레거시 환경에서 성능 병목과 개발 프로세스를 개선하며 운영 경험을 쌓았고, 개인 프로젝트에서는 최신 기술을 적용하며 시야를 넓혀가고 있습니다.
-                </p>
+            <div class="heading-row">
+                <div>
+                    <h1>나호진</h1>
+                    <p class="role">Java / Spring 개발자</p>
+                </div>
+                <button class="print-button" type="button" onclick="window.print()">인쇄 / PDF 저장</button>
             </div>
+            <div class="contacts">
+                <a href="mailto:neuma573@gmail.com">neuma573@gmail.com</a>
+                <a href="https://github.com/neuma573">github.com/neuma573</a>
+            </div>
+            <p class="introduction">Java/Spring으로 공공 서비스와 사내 그룹웨어를 개발하고 운영했습니다. 현재 경기도청 내부 업무 지식 공유 시스템인 도정지식포털의 기능 개발과 운영 배포를 담당하고 있습니다.</p>
         </header>
 
-        <!-- ══ 경력 ══ -->
-        <section id="career" aria-label="경력">
-            <div class="sec-title">
-                <h2>경력<span style="font-weight:400; font-size:12.5px; color:var(--muted); margin-left:10px;">3년 8개월</span></h2>
-            </div>
-
-            <div class="career">
-                <!-- ── 딥파인 ── -->
-                <div class="career-row">
-                    <div class="career-when">
-                        <div class="dates">2024.02 ~ 재직중</div>
-                        <div class="place">정규직 · 주임연구원</div>
-                    </div>
-                    <div class="career-what">
-                        <h3>주식회사 딥파인</h3>
-                        <div class="sub">XR 글래스 서비스 개발 회사 · 경기도청 파견</div>
-
-                        <div class="career-project">
-                            <h4 class="career-project-title">디지털 경기도정 운영 [경기민원24, 경기도정지식포털]</h4>
-                            <div class="career-project-meta">2024.02 – 현재 · 풀스택개발</div>
-                            <div class="career-project-stack">Spring Framework 4.3, MyBatis, MariaDB, jQuery, Vue.js</div>
-                            <ul class="bullets">
-                                <li>응답 1초 초과 슬로우 쿼리 전수 점검 프로세스 도입 - 실행 계획 분석 및 인덱스 전략 재설계를 통해 병목 쿼리를 체계적으로 식별 및 개선, 운영 중인 쿼리 수정을 최소화하는 방향으로 천만 건 규모 테이블의 문자열 컬럼 JOIN에 복합 인덱스를 적용하여 접속 통계 쿼리 111,500ms → 1,000ms (111배) 개선, 사용자 통계 쿼리 8,000ms → 800ms (10배) 개선</li>
-                                <li>OncePerRequestFilter 기반 로그 트레이싱 도입 - 요청 시작부터 종료까지 단일 ID로 추적 가능하도록 로그 체계 재설계, 장애 원인 분석 시 요청별 로그 즉시 식별 가능하도록 개선</li>
-                                <li>전역 예외 처리 기반 알림 체계 구축 - 사용자 예외 발생 시 관리자 페이지 및 메신저로 히스토리가 자동 적재되도록 자동화하여 운영 대응 속도 개선</li>
-                                <li>레거시 개발 환경 현대화 작업 주도 - 빌드 파이프라인 및 스크립트 제작으로 제한된 환경에서 운영 배포 자동화 기반 마련 </li>
-                            </ul>
-                        </div>
-                    </div>
+        <section aria-labelledby="career-title">
+            <h2 id="career-title">경력</h2>
+            <section class="experience" aria-labelledby="deepfine-title">
+                <div class="entry-heading">
+                    <h3 id="deepfine-title">딥파인</h3>
+                    <p class="dates">2024.02 – 현재</p>
                 </div>
+                <p class="meta">주임연구원 / 경기도청 파견 / 풀스택 개발</p>
+                <p class="scope">도정지식포털의 기능 개발과 운영 배포를 맡고 있습니다. 경기민원24에서는 지원 사업별 신청 폼 개발을 지원했습니다.</p>
+                <p class="stack">Spring Framework 4.3, MyBatis, MariaDB, JSP, jQuery, Vue.js</p>
 
-                <!-- ── 플랫타이엑스 ── -->
-                <div class="career-row">
-                    <div class="career-when">
-                        <div class="dates">2023.05 ~ 2023.08</div>
-                        <div class="place">정규직 · 사원</div>
-                    </div>
-                    <div class="career-what">
-                        <h3>주식회사 플랫타이엑스</h3>
-                        <div class="sub">암호화폐 거래소</div>
-
-                        <div class="career-project">
-                            <h4 class="career-project-title">거래소 OpenAPI SpringBoot 전환 프로젝트 </h4>
-                            <div class="career-project-meta">2023.05 – 2023.08 · 백엔드개발</div>
-                            <div class="career-project-stack">Spring Boot 2.7, Java 11, JPA, Redis (Lettuce)</div>
-                            <ul class="bullets">
-                                <li>WIP 상태로 중단된 Spring Framework 4.3 프로젝트를 인수받아 Spring Boot 2.7 기반으로 재구축</li>
-                                <li>전체 API의 HashMap 기반 파라미터 전달 구조를 Request/Response DTO로 전환하여, 타입 캐스팅 오류를 컴파일 타임에 검출 가능하도록 개선</li>
-                                <li>팀 표준에 맞춰 Redis 클라이언트를 Jedis에서 Lettuce로 전환, Spring Session 연동 구성</li>
-                                <li>수동 try-catch-commit-rollback 트랜잭션 처리를 @Transactional 선언형으로 전환하여 트랜잭션 경계 관리 코드 제거</li>
-                                <li>MyBatis XML 매퍼 전량을 Spring Data JPA로 전환, 반복적인 단순 CRUD 쿼리 제거 및 Entity 기반 도메인 모델 설계로 팀 내 데이터 접근 컨벤션 통일</li>
-                            </ul>
-                        </div>
-
-                        <div class="career-project">
-                            <h4 class="career-project-title">온보딩 프로젝트 (App-Push 서비스 개발)</h4>
-                            <div class="career-project-meta">2023.05 – 2023.08 · 백엔드개발</div>
-                            <div class="career-project-stack">Spring Boot 2.7, Java 11, Firebase FCM, RabbitMQ, MySQL</div>
-                            <ul class="bullets">
-                                <li>Firebase FCM 기반 전역 알림 발송 파이프라인 설계 및 구현</li>
-                                <li>RabbitMQ Consumer를 통한 비동기 Push 발송 처리, DLQ 구성으로 실패 메시지 격리</li>
-                                <li>Spring Scheduling 활용 정기 프로모션 메시지 자동 발송 구현</li>
-                                <li>TDD 실험적 도입, 전 서비스 레이어 단위 테스트 작성</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="achievement">
+                    <h4>접속 통계 조회 지연 개선</h4>
+                    <ul>
+                        <li>접속 통계 요청에 111.5초가 걸리는 원인을 MyBatis 로그로 추적했습니다. 사용자와 게시글을 중첩 순회하며 조회 쿼리를 반복 호출하고 있어, 이를 JOIN 쿼리로 통합했습니다.</li>
+                        <li><strong>반복 호출을 없앤 뒤에도 지연이 남아</strong> 실행 계획을 분석하고 복합 인덱스를 추가했습니다. 동일 조회 기간과 조건에서 요청 응답 시간이 1초로 줄어든 것을 확인했습니다.</li>
+                    </ul>
+                    <p class="note">Chrome 개발자 도구의 Network 탭으로 요청 응답 시간 측정.</p>
                 </div>
-
-                <!-- ── 미디어로그 ── -->
-                <div class="career-row">
-                    <div class="career-when">
-                        <div class="dates">2022.02 ~ 2023.05</div>
-                        <div class="place">정규직 · 사원</div>
-                    </div>
-                    <div class="career-what">
-                        <h3>(주) 미디어로그</h3>
-                        <div class="sub">MVNO 사업자 및 B2B 서비스 개발사 (LGU+ 자회사)</div>
-
-                        <div class="career-project">
-                            <h4 class="career-project-title">미디어로그 그룹웨어 개발 (사내 약 500명 이상 사용)</h4>
-                            <div class="career-project-meta">2022.02 – 2023.05 · 풀스택 개발</div>
-                            <div class="career-project-stack">Spring Boot, Java 1.8, MyBatis, MySQL, Vue.js, Electron</div>
-                            <ul class="bullets">
-                                <li>운영 환경에 불필요하게 출력되던 상세 로그(메일 본문 전체 등) 제거, 일일 로그 용량 약 80% 절감</li>
-                                <li>NICE 휴대폰 본인인증 연동 기반 협력사 회원가입 서비스 신규 구축, 기존 종이/파일 양식 기반 수기 등록 프로세스를 온라인 자가 등록으로 전환</li>
-                                <li>협력사 인력 투입/철수/연장 신청 시 사내 전자결재 자동 기안 연동 구현, 기존 PM → 총무 수동 전달 프로세스 제거</li>
-                                <li>총무팀 엑셀 기반 수동 관리 업무를 시스템화, 물리 출입증 발급 외 협력사 관련 수동 업무 대부분 제거</li>
-                                <li>그룹웨어 개선 공로를 인정받아 포상금 획득</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ══ 기타 프로젝트 ══ -->
-        <section id="projects" aria-label="기타 프로젝트">
-            <div class="sec-title">
-                <h2>기타 프로젝트</h2>
-            </div>
-            <div class="career-row">
-                <div class="career-when">
-                    <div class="dates">2026.03 ~ </div>
-                    <div class="place">개발 중</div>
-                </div>
-                <div class="career-what">
-                    <h3>relo</h3>
-                    <div class="sub">자기소개 작성 부담을 낮추는 인스턴트 매칭 기반 데이팅 앱</div>
-                    <ul class="bullets">
-                        <li>프로젝트 리딩 및 풀스택 개발</li>
-                        <li>Stack: Spring Boot 3.4, Supabase (PostgreSQL), React Native (Expo), Railway</li>
-                        <li>인스턴트 매칭 기반 데이팅 서비스의 백엔드 아키텍처 및 핵심 기능 설계</li>
-                        <li>LLM 기반 자기소개 자동 생성 기능 개발, 선택형 입력을 활용해 Hallucination과 응답 편차 최소화</li>
-                        <li>매칭 품질 향상을 위한 평판(Degree) 시스템 설계</li>
-                        <li>재매칭(Re-encounter Loop) 등 사용자 유지율 향상을 위한 핵심 기능 기획</li>
+                <div class="achievement">
+                    <h4>파일 다운로드 권한 검증</h4>
+                    <ul>
+                        <li>파라미터 변조를 통한 임의 파일 다운로드 문제가 발견됐습니다. 파일에는 별도 권한 컬럼이 없었고, 운영 정책상 DB 스키마 변경도 어려웠습니다.</li>
+                        <li>게시글 열람 권한을 확인한 뒤 사용자 ID, 첨부파일 ID, 시간값을 포함한 <span class="nowrap">HMAC-SHA256</span> 서명을 발급하도록 구현했습니다. 다운로드 시 로그인 세션과 대조하고, 해당 사용자와 파일에 대해서만 10분간 유효하도록 제한했습니다.</li>
                     </ul>
                 </div>
-            </div>
-            <div class="career">
-                <div class="career-row">
-                    <div class="career-when">
-                        <div class="dates">2025.04</div>
-                        <div class="place"><a href="https://github.com/chanwoo-park-service/unified-biztool">Repo</a></div>
-                    </div>
-                    <div class="career-what">
-                        <h3>unified-biztool</h3>
-                        <div class="sub">엑셀 파일 기반 입력만으로 Meta Business Suite의 다양한 광고 자산 등록을 통합하는 프로젝트</div>
-                        <ul class="bullets">
-                            <li>프로젝트 리딩</li>
-                            <li>대량 광고/캠페인/세트/크리에이티브 등록 지원</li>
-                            <li>Bean Validation과 i18n을 통해 입력 검증 및 예외 처리 시 메시지 국제화</li>
-                            <li>API 병렬처리로 기존 Meta GUI 대비 90% 빠른 광고 등록</li>
-                            <li>미숙련 비개발 인력이 Meta Business Suite에 대해 deep dive 하지 않아도 빠른 광고 등록이 가능하도록 자동화</li>
-                        </ul>
-                    </div>
+                <div class="achievement">
+                    <h4>요청별 로그 추적과 예외 알림</h4>
+                    <p>여러 요청의 DEBUG 로그가 섞여 오류가 발생한 요청의 처리 흐름을 찾기 어려웠습니다. 웹 요청과 예외 로그를 MyBatis 상세 출력과 구분하고, 요청 ID로 관련 로그를 모아 볼 수 있도록 했습니다. 예외 발생 시에는 관리자 인앱 푸시와 메신저로 알림을 보내도록 했습니다.</p>
                 </div>
+            </section>
 
-                <div class="career-row">
-                    <div class="career-when">
-                        <div class="dates">2023.12</div>
-                        <div class="place"><a href="https://github.com/neuma573/auto-board">Repo</a></div>
-                    </div>
-                    <div class="career-what">
-                        <h3>auto-board</h3>
-                        <div class="sub">모던 Spring Boot 3 기반 게시판</div>
-                        <ul class="bullets">
-                            <li>프로젝트 리딩</li>
-                            <li>Spring Security 6 초기 생태계의 학습 자료 부족 제약 하에서, 내부 동작 이해와 확장성 검증을 위해 AOP 기반 어노테이션 방식으로 권한 관리 직접 설계 구현</li>
-                            <li>OpenAI Client 및 Spring Scheduler를 활용한 자동 게시글 생성 및 답글 작성 로직 구현</li>
-                            <li>개발 컨벤션 준수로 일관되고 유지보수성 높은 코드 지향</li>
-                        </ul>
-                    </div>
+            <section class="experience print-new-page" aria-labelledby="flata-title">
+                <div class="entry-heading">
+                    <h3 id="flata-title">플랫타이엑스</h3>
+                    <p class="dates">2023.05 – 2023.08</p>
                 </div>
-            </div>
+                <p class="meta">사원 / 암호화폐 거래소 / 백엔드 개발</p>
+                <p class="stack">Java 11, Spring Boot 2.7, Firebase FCM, RabbitMQ, JPA, Redis, MySQL</p>
+                <div class="achievement">
+                    <h4>문자 발송을 대체하기 위한 푸시 서비스 개발</h4>
+                    <ul>
+                        <li>정해진 FCM과 RabbitMQ 구조를 바탕으로 푸시 발송과 재시도 처리를 구현했습니다. 재시도 한도를 넘긴 메시지는 보관하고 개발팀 Slack으로 알리도록 했으며, 기존 문자 발송 모듈의 대체 테스트까지 완료했습니다.</li>
+                        <li>폐쇄망에서 FCM API를 호출할 수 있도록 보안팀의 접근 허용 절차를 거쳐 푸시 발송 기능을 연동했습니다.</li>
+                    </ul>
+                </div>
+                <div class="achievement">
+                    <h4>기존 OpenAPI 프로젝트 전환 (온보딩 과제)</h4>
+                    <p>사내 레거시 시스템 전환 작업의 일부로, 온보딩 기간에 기존 OpenAPI 프로젝트를 Spring Framework 4.3에서 Spring Boot 2.7로 옮겼습니다.</p>
+                </div>
+            </section>
+
+            <section class="experience" aria-labelledby="medialog-title">
+                <div class="entry-heading">
+                    <h3 id="medialog-title">미디어로그</h3>
+                    <p class="dates">2022.02 – 2023.05</p>
+                </div>
+                <p class="meta">사원 / 사내 그룹웨어 / 풀스택 개발</p>
+                <p class="stack">Java 8, Spring Boot, MyBatis, MySQL, Vue.js, Electron</p>
+                <ul>
+                    <li>협력사원이 제출한 문서로 현업이 결재를 기안하고 총무가 계정을 생성하던 절차를 온라인으로 전환했습니다. NICE 본인인증을 포함한 회원가입 화면과 서버 기능을 구현했습니다.</li>
+                    <li>가입 정보로 담당 현업 명의의 결재 초안을 생성하고, 현업 상신 후 최종 승인 시 계정을 활성화하도록 연동했습니다. 협력사 직원의 철수와 연장 관리 기능도 개발했습니다.</li>
+                </ul>
+            </section>
         </section>
 
-        <!-- ══ 학력 ══ -->
-        <section id="education" aria-label="학력">
-            <div class="sec-title">
-                <h2>학력</h2>
-            </div>
-            <div class="career">
-                <div class="career-row">
-                    <div class="career-when">
-                        <div class="dates">2013 ~ 2021</div>
-                        <div class="place">졸업</div>
-                    </div>
-                    <div class="career-what">
-                        <h3>중앙대학교 · 문헌정보학과</h3>
-                    </div>
+        <section class="projects" aria-labelledby="projects-title">
+            <h2 id="projects-title">프로젝트</h2>
+            <section class="project" aria-labelledby="biztool-title">
+                <div class="entry-heading">
+                    <h3 id="biztool-title"><a href="https://github.com/chanwoo-park-service/unified-biztool">unified-biztool <span class="link-label">GitHub ↗</span></a></h3>
+                    <p class="dates">2025.04</p>
                 </div>
-            </div>
+                <p class="meta">엑셀 기반 Meta 광고 등록 도구 / 전체 기능 구현 담당</p>
+                <p class="stack">Java 17, Spring Boot 3.3, Thymeleaf, Apache POI, Redis, Meta Graph API</p>
+                <ul>
+                    <li>엑셀에 작성된 광고를 Meta Business Suite에서 수동 등록하던 작업을 웹으로 옮겼습니다. 광고 계정과 캠페인 조회, 이미지와 영상 업로드를 거쳐 집행 대기 상태의 광고가 생성되도록 구현하고, 광고 등록 테스트를 완료했습니다.</li>
+                    <li>엑셀 행 병렬 처리와 Meta API 응답 캐싱, 영상 분할 업로드 및 실패 시 취소 처리를 구현했습니다.</li>
+                </ul>
+            </section>
+            <section class="project" aria-labelledby="autoboard-title">
+                <div class="entry-heading">
+                    <h3 id="autoboard-title"><a href="https://github.com/neuma573/auto-board">auto-board <span class="link-label">GitHub ↗</span></a></h3>
+                    <p class="dates">2023.12</p>
+                </div>
+                <p class="meta">개인 온프레미스 서버에 배포한 게시판</p>
+                <p class="stack">Java 17, Spring Boot 3.1, JPA, QueryDSL, MySQL, Redis</p>
+                <ul>
+                    <li>GitHub Actions와 Linux 스크립트로 배포 작업을 자동화했습니다.</li>
+                    <li>IP 헤더를 바꾸는 대량 요청을 경험한 뒤 주요 API에 Google reCAPTCHA 서버 검증을 추가했습니다. 요청 횟수 제한에는 Bucket4j의 토큰 버킷을 사용했습니다.</li>
+                </ul>
+            </section>
         </section>
 
-        <!-- ══ 수상 ══ -->
-        <section id="awards" aria-label="수상">
-            <div class="sec-title">
-                <h2>수상</h2>
-            </div>
-            <div class="career">
-                <div class="career-row">
-                    <div class="career-when">
-                        <div class="dates">2021.05</div>
-                        <div class="place">한국콘텐츠진흥원</div>
-                    </div>
-                    <div class="career-what">
-                        <h3>예비창업자패키지 입상</h3>
-                        <div class="sub">MVP 개발</div>
-                        <ul class="bullets">
-                            <li>사업팀의 아이디어를 빠르게 MVP로 구현하여 시장 검증을 지원 - 짧은 주기로 기능 개발 및 배포를 반복하며 서비스 방향성 결정에 및 정부 지원 사업 선정에 기여</li>
-                        </ul>
-                    </div>
-                </div>
+        <section class="education" aria-labelledby="education-title">
+            <h2 id="education-title">학력</h2>
+            <div class="entry-heading">
+                <p>중앙대학교 문헌정보학과 졸업</p>
+                <p class="dates">2013 – 2021</p>
             </div>
         </section>
-
-
-        <div class="footnote">
-            <span id="printAt"></span>
-        </div>
+        <footer>내용 확인 기준: 2026.09.22</footer>
     </article>
 </main>
-<script>
-    (function () {
-        const now = new Date();
-
-        // month는 사람이 쓰는 1~12 기준
-        const careers = [
-            {
-                start: { year: 2022, month: 2 },
-                end: { year: 2023, month: 5 }
-            },
-            {
-                start: { year: 2023, month: 5 },
-                end: { year: 2023, month: 8 }
-            },
-            {
-                start: { year: 2024, month: 2 },
-                end: {
-                    year: now.getFullYear(),
-                    month: now.getMonth() + 1
-                }
-            }
-        ];
-
-        const toMonthIndex = ({ year, month }) =>
-            year * 12 + (month - 1);
-
-        const ranges = careers
-            .map(({ start, end }) => ({
-                start: toMonthIndex(start),
-                // 종료 월 포함
-                endExclusive: toMonthIndex(end) + 1
-            }))
-            .sort((a, b) => a.start - b.start);
-
-        const mergedRanges = [];
-
-        for (const range of ranges) {
-            const last = mergedRanges[mergedRanges.length - 1];
-
-            if (!last || range.start > last.endExclusive) {
-                mergedRanges.push({ ...range });
-            } else {
-                last.endExclusive = Math.max(
-                    last.endExclusive,
-                    range.endExclusive
-                );
-            }
-        }
-
-        const totalMonths = mergedRanges.reduce(
-            (sum, range) =>
-                sum + (range.endExclusive - range.start),
-            0
-        );
-
-        const years = Math.floor(totalMonths / 12);
-        const months = totalMonths % 12;
-
-        const text = [
-            years > 0 ? `${years}년` : '',
-            months > 0 ? `${months}개월` : ''
-        ].filter(Boolean).join(' ') || '0개월';
-
-        const el = document.querySelector('.sec-title h2 span');
-
-        if (el) {
-            el.textContent = text;
-        }
-
-        console.log({
-            currentDate: now,
-            ranges,
-            mergedRanges,
-            totalMonths,
-            text
-        });
-    })();
-</script>
 </body>
 </html>
